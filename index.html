@@ -37,7 +37,7 @@
    </style>
   </head>
 
-<body>
+<body onload="createMap()">
   <!--A container for the map-->
   <div id="map">
   </div>
@@ -52,20 +52,22 @@
   </div>
   
   <script>
-    //This loads the esri.map library
-    dojo.require("esri.map");
+    function createMap(){
+      //This loads the esri.map library
+      dojo.require("esri.map");
     
-    //This creates the map, using the specified webmapID
-    esri.arcgis.utils.createMap("ef9c7fbda731474d98647bebb4b33c20", "map");
+      //This creates the map, using the specified webmapID
+      esri.arcgis.utils.createMap("ef9c7fbda731474d98647bebb4b33c20", "map");
 
-    //Adds a functionto the button
-    document.getElementById("clickButton").onclick = aFunction;
-
+      //Adds a functionto the button
+      document.getElementById("clickButton").onclick = aFunction;
+    }
     //A function
     function aFunction() {
       alert("Alert");
       document.getElementById("informationArea").innerHTML = "New Message";
     }
+      
   </script>
 </body>
 </html>
