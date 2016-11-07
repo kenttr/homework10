@@ -51,5 +51,22 @@
   <div id="buttonContainer">
     <button id="clickButton">Click</button>
   </div>
+  
+  <script>
+    //This loads the esri.map library
+    dojo.require("esri.map");
+    
+    //This creates the map, using the specified webmapID
+    esri.arcgis.utils.createMap("ef9c7fbda731474d98647bebb4b33c20", "map");
+
+    //Adds a functionto the button
+    document.getElementById("clickButton").onclick = aFunction;
+
+    //A function
+    function aFunction() {
+      alert("Alert");
+      document.getElementById("informationArea").innerHTML = "New Message";
+    }
+  </script>
 </body>
 </html>
