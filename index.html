@@ -26,13 +26,13 @@
         bottom: 0px;
         left: 0px;
         right: 0px;
-        background-color: grey;
+        background-color: red;
       }
 
       #buttonContainer {
         position: absolute;
-        top: 10px;
-        right: 10px
+        top: 100px;
+        right: 100px
       }
    </style>
   </head>
@@ -48,7 +48,7 @@
 
   <!--A container the button-->
   <div id="buttonContainer">
-    <button id="clickButton">Click</button>
+    <button id="clickButton">Information</button>
   </div>
   
   <script>
@@ -57,14 +57,14 @@
       dojo.require("esri.map");
     
       //This creates the map, using the specified webmapID
-      esri.arcgis.utils.createMap("ef9c7fbda731474d98647bebb4b33c20", "map");
+      esri.arcgis.utils.createMap("344fc9e1c3c94021b581c3297af98190", "map");
 
       //Adds a functionto the button
       document.getElementById("clickButton").onclick = aFunction;
     }
     //A function
     function aFunction() {
-      alert("Alert");
+      alert("Who did you vorte for?");
       document.getElementById("informationArea").innerHTML = "New Message";
     }
       
